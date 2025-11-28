@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>
+    PUBSR
+    
+      - 메인
+    
+  </title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="theme-color" content="#4285f4" />
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, user-scalable=no" />
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/csr.css" />
+  <link rel="stylesheet" href="/css/respond.css" />
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/js/csr.js"></script>
+
+  
+  
+  <script src="/js/typed.min.js"></script>
+  <style>
+    .visual{background:#111;height:100vh;}
+    .visual .introTitle {
+      text-align:center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 3rem;
+    }
+
+    .visual .introSubtitle {
+      margin-top:1rem;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+
+    .visual .text-slider{color: #fff;}
+    .visual .text-slider-items {
+      display: none;
+    }
+
+    .visual .cover{position: absolute;top:0;left:0;width:100%;height: 100%;font-size:0;text-align:center;box-sizing:border-box}
+    .visual .cover:before{display:inline-block;vertical-align:middle;content:'';width:0;height:100%;}
+    .visual .cover .vam{display:inline-block;vertical-align:middle;}
+
+    @media all and (max-width: 1200px) {
+      .visual{height: calc(100vh - 50px)}
+      .visual .cover{padding-bottom:100px}
+    }
+  </style>
+
+</head>
+
+<body>
+  
+  <div id="wrap">
+    <div id="_device_pc"></div>
+<div id="_device_ta"></div>
+<div id="_device_mo"></div>
+
+<!-- PC, Mobile 공통 header -->
+<header id="header">
+  <div class="inner">
+
+    <!-- logo -->
+    <h1 class="logo">
+      <a href="/">
+        <span class="text">CSR</span>
+        
+      </a>
+    </h1>
+
+    <!-- gnb -->
+    <ul id="gnb">
+      <li>
+  <a href="/_csr/project/inhouse.php">PROJECT</a>
+  <ul>
+    <li>
+      <a href="/_csr/project/inhouse.php">In-House</a>
+    </li>
+    <li>
+      <a href="/_csr/project/outsourcing.php">Outsourcing</a>
+    </li>
+  </ul>
+</li>
+
+<li>
+  <a href="/_csr/works/script/_intro.php">WORKS</a>
+  <ul>
+    <li>
+      <a href="/_csr/works/script/_intro.php">스크립트</a>
+    </li>
+    <li>
+      <a href="/_csr/works/skin/history.php">스킨</a>
+    </li>
+    <li>
+      <a href="/_csr/setting/html_setting">코딩리스트 기본세팅</a>
+    </li>
+  </ul>
+</li>
+
+<li>
+  <a href="/_csr/docs/setting/html.php">DOCS</a>
+  <ul>
+    <li>
+      <a href="/_csr/docs/setting/html.php">세팅 Guide</a>
+    </li>
+    <li>
+      <a href="/_csr/docs/coding_guide/basic.php">코딩 Guide</a>
+    </li>
+    <li>
+      <a href="/_csr/docs/tip/vscode.php">팁</a>
+    </li>
+  </ul>
+</li>
+
+
+
+    </ul>
+
+    <!-- slide button -->
+    <div id="slide-btn">
+      <button title="Open menu"><span></span></button>
+    </div>
+
+  </div>
+</header>
+
+<div id="drdw"><ul class="inner"></ul></div>
+
+<!-- Mobile 햄버거메뉴 -->
+<div id="slide-menu">
+
+  <div class="tit">
+    <a href="#" id="slide-close"></a>
+  </div>
+
+  <!-- tnb -->
+  <ul id="tnb-mo">
+
+    
+      <li><a href="/member/login"></a></li>
+      <li><a href="/member/join"></a></li>
+    
+
+    <li>
+      <a href="#" data-ajaxpop="/popup/sitemap">SITEMAP</a>
+    </li>
+
+  </ul>
+
+  <!-- gnb -->
+  <ul id="gnb-mo">
+   <li>
+  <a href="/_csr/project/inhouse.php">PROJECT</a>
+  <ul>
+    <li>
+      <a href="/_csr/project/inhouse.php">In-House</a>
+    </li>
+    <li>
+      <a href="/_csr/project/outsourcing.php">Outsourcing</a>
+    </li>
+  </ul>
+</li>
+
+<li>
+  <a href="/_csr/works/script/_intro.php">WORKS</a>
+  <ul>
+    <li>
+      <a href="/_csr/works/script/_intro.php">스크립트</a>
+    </li>
+    <li>
+      <a href="/_csr/works/skin/history.php">스킨</a>
+    </li>
+    <li>
+      <a href="/_csr/setting/html_setting">코딩리스트 기본세팅</a>
+    </li>
+  </ul>
+</li>
+
+<li>
+  <a href="/_csr/docs/setting/html.php">DOCS</a>
+  <ul>
+    <li>
+      <a href="/_csr/docs/setting/html.php">세팅 Guide</a>
+    </li>
+    <li>
+      <a href="/_csr/docs/coding_guide/basic.php">코딩 Guide</a>
+    </li>
+    <li>
+      <a href="/_csr/docs/tip/vscode.php">팁</a>
+    </li>
+  </ul>
+</li>
+
+
+
+  </ul>
+</div>
+
+<div id="slide-bg"></div>
+
+    
+<div class="visual">
+  <div class="cover">
+    <div class="vam">
+      <h1 class="introTitle">웹 퍼블리셔 조성래입니다.</h1>
+      <p class="introSubtitle">
+        <span class="text-slider-items">
+          Web Publisher,UX/UI Publisher,Frontend Developer,Graphic User Interface Developer
+        </span>
+        <strong class="text-slider"></strong>
+      </p>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer">
+	<div class="ftWrap">
+
+		<!-- address -->
+		 <address>
+
+			<span class="copyright">COPYRIGHT 2023. CSR. ALL RIGHT RESERVED.</span>
+		</address>
+
+
+	</div>
+</footer>
+  </div>
+  
+  
+<script>
+  if ($('.text-slider').length == 1) {
+    var typed_strings = $('.text-slider-items').text();
+    var typed = new Typed('.text-slider', {
+      strings: typed_strings.split(','),
+      typeSpeed: 80,
+      loop: true,
+      backDelay: 5500,
+      backSpeed: 40
+    });
+  }
+</script>
+
+</body>
+</html>

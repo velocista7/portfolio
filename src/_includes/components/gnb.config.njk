@@ -1,0 +1,47 @@
+<li{% if dep[0] == 1 %} class="active"{% endif %}>
+  <a href="/_csr/project/inhouse.php">PROJECT</a>
+  <ul>
+    <li{% if dep[0] == 1 and dep[1] == 1 %} class="active"{% endif %}>
+      <a href="/_csr/project/inhouse.php">In-House</a>
+    </li>
+    <li{% if dep[0] == 1 and dep[1] == 2 %} class="active"{% endif %}>
+      <a href="/_csr/project/outsourcing.php">Outsourcing</a>
+    </li>
+  </ul>
+</li>
+
+<li{% if dep[0] == 2 %} class="active"{% endif %}>
+  <a href="/_csr/works/script/_intro.php">WORKS</a>
+  <ul>
+    <li{% if dep[0] == 2 and dep[1] == 1 %} class="active"{% endif %}>
+      <a href="/_csr/works/script/_intro.php">스크립트</a>
+    </li>
+    <li{% if dep[0] == 2 and dep[1] == 2 %} class="active"{% endif %}>
+      <a href="/_csr/works/skin/history.php">스킨</a>
+    </li>
+    <li{% if dep[0] == 2 and dep[1] == 3 %} class="active"{% endif %}>
+      <a href="/_csr/setting/html_setting">코딩리스트 기본세팅</a>
+    </li>
+  </ul>
+</li>
+
+<li{% if dep[0] == 3 %} class="active"{% endif %}>
+  <a href="/_csr/docs/setting/html.php">DOCS</a>
+  <ul>
+    <li{% if dep[0] == 3 and dep[1] == 1 %} class="active"{% endif %}>
+      <a href="/_csr/docs/setting/html.php">세팅 Guide</a>
+    </li>
+    <li{% if dep[0] == 3 and dep[1] == 2 %} class="active"{% endif %}>
+      <a href="/_csr/docs/coding_guide/basic.php">코딩 Guide</a>
+    </li>
+    <li{% if dep[0] == 3 and dep[1] == 3 %} class="active"{% endif %}>
+      <a href="/_csr/docs/tip/vscode.php">팁</a>
+    </li>
+  </ul>
+</li>
+
+{# 
+서브페이지에 LNB 자동 생성을 위해 GNB 소스코드가 추가 되어야 하지만
+GNB에는 노출되지 않길 원하는 경우
+li에 'hidden-gnb' Class 추가
+#}

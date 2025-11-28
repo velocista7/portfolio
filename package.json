@@ -1,0 +1,16 @@
+{
+  "name": "port",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "dev": "node ./node_modules/@11ty/eleventy/cmd.cjs --serve",
+  "build": "node ./node_modules/@11ty/eleventy/cmd.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

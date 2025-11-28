@@ -1,0 +1,68 @@
+<div id="_device_pc"></div>
+<div id="_device_ta"></div>
+<div id="_device_mo"></div>
+
+<!-- PC, Mobile 공통 header -->
+<header id="header">
+  <div class="inner">
+
+    <!-- logo -->
+    <h1 class="logo">
+      <a href="{{ site.dir }}/">
+        <span class="text">CSR</span>
+        {# <img src="{{ site.dir }}/images/layout/deep-logo.png" alt=""> #}
+      </a>
+    </h1>
+
+    <!-- gnb -->
+    <ul id="gnb">
+      {% include "components/gnb.config.njk" %}
+    </ul>
+
+    <!-- slide button -->
+    <div id="slide-btn">
+      <button title="Open menu"><span></span></button>
+    </div>
+
+  </div>
+</header>
+
+<div id="drdw"><ul class="inner"></ul></div>
+
+<!-- Mobile 햄버거메뉴 -->
+<div id="slide-menu">
+
+  <div class="tit">
+    <a href="#" id="slide-close"></a>
+  </div>
+
+  <!-- tnb -->
+  <ul id="tnb-mo">
+
+    {% if mb_level > 1 %}
+      <li class="login">
+        <a href="{{ process_url }}/member/member_logout.php">{{ lan['로그아웃'] }}</a>
+      </li>
+
+      <li class="join">
+        <a href="{{ subpage }}/member/join?viewMode=modify">{{ lan['정보수정'] }}</a>
+      </li>
+
+    {% else %}
+      <li><a href="{{ subpage }}/member/login">{{ lan['로그인'] }}</a></li>
+      <li><a href="{{ subpage }}/member/join">{{ lan['회원가입'] }}</a></li>
+    {% endif %}
+
+    <li>
+      <a href="#" data-ajaxpop="{{ subpage }}/popup/sitemap">SITEMAP</a>
+    </li>
+
+  </ul>
+
+  <!-- gnb -->
+  <ul id="gnb-mo">
+   {% include "components/gnb.config.njk" %}
+  </ul>
+</div>
+
+<div id="slide-bg"></div>

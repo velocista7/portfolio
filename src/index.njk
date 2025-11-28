@@ -1,0 +1,69 @@
+{% extends "common.njk" %}
+
+{% set title = "메인" %}
+{% set dep = [0, 0, 0] %}
+
+{# 머리쪽에만 들어가야 하는 JS/CSS가 있다면 레이아웃의 block을 쓴다고 가정 #}
+{% block head_extra %}
+  <script src="{{ site.DIR }}/js/typed.min.js"></script>
+  <style>
+    .visual{background:#111;height:100vh;}
+    .visual .introTitle {
+      text-align:center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 3rem;
+    }
+
+    .visual .introSubtitle {
+      margin-top:1rem;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+
+    .visual .text-slider{color: #fff;}
+    .visual .text-slider-items {
+      display: none;
+    }
+
+    .visual .cover{position: absolute;top:0;left:0;width:100%;height: 100%;font-size:0;text-align:center;box-sizing:border-box}
+    .visual .cover:before{display:inline-block;vertical-align:middle;content:'';width:0;height:100%;}
+    .visual .cover .vam{display:inline-block;vertical-align:middle;}
+
+    @media all and (max-width: 1200px) {
+      .visual{height: calc(100vh - 50px)}
+      .visual .cover{padding-bottom:100px}
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+<div class="visual">
+  <div class="cover">
+    <div class="vam">
+      <h1 class="introTitle">웹 퍼블리셔 조성래입니다.</h1>
+      <p class="introSubtitle">
+        <span class="text-slider-items">
+          Web Publisher,UX/UI Publisher,Frontend Developer,Graphic User Interface Developer
+        </span>
+        <strong class="text-slider"></strong>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block body_scripts %}
+<script>
+  if ($('.text-slider').length == 1) {
+    var typed_strings = $('.text-slider-items').text();
+    var typed = new Typed('.text-slider', {
+      strings: typed_strings.split(','),
+      typeSpeed: 80,
+      loop: true,
+      backDelay: 5500,
+      backSpeed: 40
+    });
+  }
+</script>
+{% endblock %}

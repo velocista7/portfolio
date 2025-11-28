@@ -1,0 +1,13 @@
+{
+  "DIR": "",
+  "SUBPAGE": "/subpage",
+  "SP_PROCESS_URL": "https://example.com/process",
+  "lan": {
+    "로그아웃": "로그아웃",
+    "정보수정": "정보수정",
+    "로그인": "로그인",
+    "회원가입": "회원가입"
+  },
+   "hijs": false
+
+}
